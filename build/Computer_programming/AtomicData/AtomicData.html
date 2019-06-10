@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Using Data in C++ &#8212; Runestone Interactive Overview</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/presenter_mode.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=808B982A" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css?v=F471F95B" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css?v=1CE53237" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css?v=58C4E18A" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css?v=239FC54E" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css?v=8A1A42E4" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css?v=C184EB8A" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css?v=B9BAA0D1" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css?v=3BA0E63E" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css?v=2F3E13EE" />
+    <link rel="stylesheet" type="text/css" href="../_static/js_lib/prettify.css?v=2A364B6B" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css?v=E220AC33" />
+    <link rel="stylesheet" type="text/css" href="../_static/reveal.css?v=4A81D381" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css?v=C6382F3" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css?v=424F1CC9" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css?v=E5385B3B" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js?v=21EFC8E1"></script>
+    <script type="text/javascript" src="../_static/codemirror.js?v=94F552C9"></script>
+    <script type="text/javascript" src="../_static/xml.js?v=236EDFF7"></script>
+    <script type="text/javascript" src="../_static/css.js?v=623153CE"></script>
+    <script type="text/javascript" src="../_static/python.js?v=14A28F1F"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js?v=33B91944"></script>
+    <script type="text/javascript" src="../_static/javascript.js?v=6F38CA04"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js?v=599B42B0"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js?v=88A1430F"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js?v=AE15A4A1"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js?v=8ABDFE7F"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js?v=747279FF"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js?v=7B020E13"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js?v=660E85C3"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js?v=54B21948"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js?v=3FBAE230"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js?v=DC7AC815"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js?v=48A5D93E"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js?v=9FA573E1"></script>
+    <script type="text/javascript" src="../_static/clike.js?v=2DCE0756"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js?v=5150FA78"></script>
+    <script type="text/javascript" src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script type="text/javascript" src="../_static/mchoice.js?v=8329CA55"></script>
+    <script type="text/javascript" src="../_static/timedmc.js?v=B010A457"></script>
+    <script type="text/javascript" src="../_static/timed.js?v=6789FE30"></script>
+    <script type="text/javascript" src="../_static/clickable.js?v=9560E65E"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js?v=93989C23"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js?v=836E01C"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js?v=B64CF0A8"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js?v=42F9EBEA"></script>
+    <script type="text/javascript" src="../_static/pytutor.js?v=82B022B9"></script>
+    <script type="text/javascript" src="../_static/codelens.js?v=CABECD49"></script>
+    <script type="text/javascript" src="../_static/datafile.js?v=3ED1A80C"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js?v=2B6403E8"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js?v=378F237E"></script>
+    <script type="text/javascript" src="../_static/fitb.js?v=8E40E713"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js?v=2AA17071"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script type="text/javascript" src="../_static/js_lib/prettify.js?v=CA7E8928"></script>
+    <script type="text/javascript" src="../_static/js_lib/hammer.min.js?v=73056367"></script>
+    <script type="text/javascript" src="../_static/parsons.js?v=93EFFF39"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js?v=2EEA9E5A"></script>
+    <script type="text/javascript" src="../_static/poll.js?v=6C59AE9F"></script>
+    <script type="text/javascript" src="../_static/reveal.js?v=112CBFA2"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js?v=5EB6170D"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js?v=B3A117D7"></script>
+    <script type="text/javascript" src="../_static/showEval.js?v=C5CE0C81"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js?v=5BE6106"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js?v=53E888DE"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script type="text/javascript" src="../_static/Blob.js?v=AEC2447"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../_static/presenter_mode.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'Computer_programming';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'Computer_programming';
+  eBookConfig.acDefaultLanguage = 'cpp' ? 'cpp' : 'python'
+  eBookConfig.runestone_version = '3.4.5';
+  eBookConfig.jobehost = 'http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
+  eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
+  eBookConfig.downloadsEnabled = false;
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.allow_pairs = false ? false : false;
+</script>
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">Computer Programming C++</a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+        <!-- social media dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHNwYJKoZIhvcNAQcEoIIHKDCCByQCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAcrkqh1hn3lYqIpfXxNqe1T82EhXzCJGy1yMAmklpyZshyMkfDGe1Bhx+iwyGeoYRTTyphFmP+9M3NyO0+Q5XdHxgZPx/zYjjBxlZHgEV6jhE8bN2fHkkPf0VHfz0a0QQylQOPlKiOTZV7B37Jpk6yM47oVZ1tG/KNm0NkfmB76DELMAkGBSsOAwIaBQAwgbQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIi0GmFfOlcjuAgZBbYOo9UO+CpMQa+PYqwsUmUnJvXIImeMeNI3KVTUx5Cfk9gNMo3WzPeiB5IqZo9nRAQ0mf1qL2ecLeB5tidM+lgBUhOxfj3/FecpnVFa0263gp4g+PLw8jzhvVRdUon1K3SeO1Rzh23fIRKwnrD6btt73uwtj0sl3tGd8qz+6GIcwPDdRk9VcUffiBJT/ZagKgggOHMIIDgzCCAuygAwIBAgIBADANBgkqhkiG9w0BAQUFADCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wHhcNMDQwMjEzMTAxMzE1WhcNMzUwMjEzMTAxMzE1WjCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMFHTt38RMxLXJyO2SmS+Ndl72T7oKJ4u4uw+6awntALWh03PewmIJuzbALScsTS4sZoS1fKciBGoh11gIfHzylvkdNe/hJl66/RGqrj5rFb08sAABNTzDTiqqNpJeBsYs/c2aiGozptX2RlnBktH+SUNpAajW724Nv2Wvhif6sFAgMBAAGjge4wgeswHQYDVR0OBBYEFJaffLvGbxe9WT9S1wob7BDWZJRrMIG7BgNVHSMEgbMwgbCAFJaffLvGbxe9WT9S1wob7BDWZJRroYGUpIGRMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4GBAIFfOlaagFrl71+jq6OKidbWFSE+Q4FqROvdgIONth+8kSK//Y/4ihuE4Ymvzn5ceE3S/iBSQQMjyvb+s2TWbQYDwcp129OPIbD9epdr4tJOUNiSojw7BHwYRiPh58S1xGlFgHFXwrEBb3dgNbMUa+u4qectsMAXpVHnD9wIyfmHMYIBmjCCAZYCAQEwgZQwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tAgEAMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xMzExMDMxMzQxMzFaMCMGCSqGSIb3DQEJBDEWBBRDJF8w+zsMr7FSk+pwinB5f5D4rzANBgkqhkiG9w0BAQEFAASBgHw1LMHpkpaqHIvDGdFE0eG+2mZlmMnUeDCBhQlbc7QMzFQYKTV94NfaebBO4PmNdADe1rq4WidSRZZbE7CzkX9IGENYnBTWY0hb2l0lGdGrJdGeWyV3ekg9WVaFMMumrekds96h3Cx7dGz2kWDzIai2iEXE/qoE+xpkyXAYZNV3-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li>
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/Computer_programming/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:ACFactory.toggleScratchActivecode()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='/runestone/static/Computer_programming/navhelp.html'>Navigation Help</a></li>
+            <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=Computer_programming&page=AtomicData'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+      </div>
+
+
+
+
+
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Using Data in C++</a></li>
+<li><a class="reference internal" href="#numeric-data">Numeric Data</a></li>
+<li><a class="reference internal" href="#boolean-data">Boolean Data</a></li>
+<li><a class="reference internal" href="#character-data">Character Data</a></li>
+<li><a class="reference internal" href="#pointers">Pointers</a><ul>
+<li><a class="reference internal" href="#pointer-syntax">Pointer Syntax</a><ul>
+<li><a class="reference internal" href="#the-address-of-operator">The address-of operator, <code class="docutils literal notranslate"><span class="pre">&amp;</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#accessing-values-from-pointers">Accessing Values from Pointers</a></li>
+<li><a class="reference internal" href="#the-null-pointer">The NULL pointer</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#summary">Summary</a></li>
+<li><a class="reference internal" href="#check-yourself">Check Yourself</a></li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="using-data-in-c">
+<h1>Using Data in C++<a class="headerlink" href="#using-data-in-c" title="Permalink to this headline">¶</a></h1>
+<p>C++ requires the users specify the specific data type of each variable
+before it is used.
+The primary C++ built-in atomic data types are: integer (<code class="docutils literal notranslate"><span class="pre">int</span></code>),
+floating point (<code class="docutils literal notranslate"><span class="pre">float</span></code>), double precision floating point (<code class="docutils literal notranslate"><span class="pre">double</span></code>),
+Boolean (<code class="docutils literal notranslate"><span class="pre">bool</span></code>), and character (<code class="docutils literal notranslate"><span class="pre">char</span></code>). There is also a special
+type which holds a memory location called <code class="docutils literal notranslate"><span class="pre">pointer</span></code>. C++ also has
+collection or compound data types, which will be discussed in a future
+chapter.</p>
+</div>
+<div class="section" id="numeric-data">
+<h1>Numeric Data<a class="headerlink" href="#numeric-data" title="Permalink to this headline">¶</a></h1>
+<p>Numeric C++ data types include <code class="docutils literal notranslate"><span class="pre">int</span></code> for integer, <code class="docutils literal notranslate"><span class="pre">float</span></code>
+for floating point, <code class="docutils literal notranslate"><span class="pre">double</span></code> for double precision floating point.</p>
+<p>The standard arithmetic operations, +, -, *, and /
+are used with optional parentheses to force the order of
+operations away from normal operator precedence.</p>
+<p>In Python we can use <code class="docutils literal notranslate"><span class="pre">//</span></code> to get integer division.
+In C++, we declare all data types.
+When two integers are divided in C++, the integer portion of the
+quotient is returned and the fractional portion is removed.
+i.e. When two integers are divided, integer division is used.
+To get the whole quotient, declaring one of the numbers as a float will
+convert the entire result into floating point.</p>
+<p>Exponentiation in C++ is done using <code class="docutils literal notranslate"><span class="pre">pow()</span></code> from the <code class="docutils literal notranslate"><span class="pre">cmath</span></code> library
+and the remainder (modulo) operator is done with <code class="docutils literal notranslate"><span class="pre">%</span></code>.</p>
+<p>Run the following code to see that you understand each result.</p>
+<div id='intro' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="C++" >
+
+<div data-childcomponent="intro_1cpp" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=intro_1cpp data-lang="cpp" 
+      data-timelimit=25000    
+    data-audio=''     
+         data-caption='Basic Arithmetic Operators C++' >
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main(){
+
+    cout << (2+3*4) << endl;
+    cout << (2+3)*4 << endl;
+    cout << pow(2, 10) << endl;
+    cout << float(6)/3 << endl;
+    cout << float(7)/3 << endl;
+    cout << 7/3 << endl; //In C++ this is integer division
+    cout << 7%3 << endl;
+    cout << float(3)/6 << endl;
+    cout << 3/6 << endl;
+    cout << 3%6 << endl;
+    cout << pow(2, 100) << endl;
+
+    return 0;
+}
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Python" >
+
+<div data-childcomponent="intro_1py" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=intro_1py data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''     
+         data-caption='Basic Arithmetic Operators Python' >
+def main():
+
+    print(2+3*4)
+    print((2+3)*4)
+    print(2**10)
+    print(6/3)
+    print(7/3)
+    print(7//3)
+    print(7%3)
+    print(3/6)
+    print(3//6)
+    print(3%6)
+    print(2**100)
+
+main()
+</textarea>
+</div>
+</div>
+    </div>
+
+<p>When declaring numeric variables in C++,
+modifiers like <code class="docutils literal notranslate"><span class="pre">short</span></code>, <code class="docutils literal notranslate"><span class="pre">long</span></code>, and <code class="docutils literal notranslate"><span class="pre">unsigned</span></code>
+can optionally be used to help
+to ensure space is used as efficiently as possible.</p>
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="mc_integer_div">
+            <p>Q-1: what is the result of dividing <code class="docutils literal notranslate"><span class="pre">3/2</span></code> in C++?</p>
+
+            <li data-component="answer" data-correct id="mc_integer_div_opt_a">1</li><li data-component="feedback" id="mc_integer_div_opt_a">Right!  This is like ``3//2`` in Python.</li>
+            
+            <li data-component="answer"  id="mc_integer_div_opt_b">1.5</li><li data-component="feedback" id="mc_integer_div_opt_b">No. Integer division is used. Try again.</li>
+            
+            <li data-component="answer"  id="mc_integer_div_opt_c">2</li><li data-component="feedback" id="mc_integer_div_opt_c">No. Integer division is used. Try again.</li>
+            
+            <li data-component="answer"  id="mc_integer_div_opt_d">A run-time error will occur.</li><li data-component="feedback" id="mc_integer_div_opt_d">No, C++ generally will try to do as you ask.</li>
+            
+            <li data-component="answer"  id="mc_integer_div_opt_e">none of the above</li><li data-component="feedback" id="mc_integer_div_opt_e">One of the above is correct.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="mc_exponentiation">
+            <p>Q-2: How do I raise 4 to 5th power in C++?</p>
+
+            <li data-component="answer"  id="mc_exponentiation_opt_a">``4**5``</li><li data-component="feedback" id="mc_exponentiation_opt_a">No, ``**`` is used in Python, not C++.</li>
+            
+            <li data-component="answer"  id="mc_exponentiation_opt_b">``5**4``</li><li data-component="feedback" id="mc_exponentiation_opt_b">No, ``**`` is used in Python, not C++, and the operators are reversed.</li>
+            
+            <li data-component="answer"  id="mc_exponentiation_opt_c">``4^5``</li><li data-component="feedback" id="mc_exponentiation_opt_c">No. The ``^`` is a valid operator in C++, but it does something else.</li>
+            
+            <li data-component="answer"  id="mc_exponentiation_opt_d">``pow(4, 5)``</li><li data-component="feedback" id="mc_exponentiation_opt_d">You got it! Remember the cmath library will need to be included for pow() to work.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="boolean-data">
+<h1>Boolean Data<a class="headerlink" href="#boolean-data" title="Permalink to this headline">¶</a></h1>
+<p>Boolean data types are named after George Boole who was an English mathematician,
+so the word “Boolean” should be capitalized. However,
+the Boolean data type, in C++ uses the keyword <code class="docutils literal notranslate"><span class="pre">bool</span></code>
+which is not capitalized.
+The possible state values
+for a C++ Boolean are lower case <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code>.
+Be sure to note the difference in capitalization from Python.
+In Python, these same truth values are capitalized, while in C++,
+they are lower case.</p>
+<p>C++ uses the standard Boolean operators, but they are represented
+differently than in Python: “and” is given by <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code> , “or” is given by <code class="docutils literal notranslate"><span class="pre">||</span></code>
+, and “not” is given by <code class="docutils literal notranslate"><span class="pre">!</span></code>.
+Note that the internally stored values representing <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code>
+are actually <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">0</span></code> respectively. Hence, we see this in output as well.</p>
+<div id='logical1' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="C++" >
+
+<div data-childcomponent="logical_1cpp" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=logical_1cpp data-lang="cpp" 
+      data-timelimit=25000    
+    data-audio=''     
+         data-caption='Logical Operators C++' >
+#include <iostream>
+using namespace std;
+
+int main() {
+  cout << true << endl;
+  cout << false << endl;
+  cout << (true || false) << endl;
+  cout << (true && false) << endl;
+  return 0;
+}
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Python" >
+
+<div data-childcomponent="logical_1py" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=logical_1py data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''     
+         data-caption='Logical Operators Python' >
+def main():
+    print(True)
+    print(False)
+    print(True or False)
+    print(True and False)
+main()
+</textarea>
+</div>
+</div>
+    </div>
+
+<p>Boolean data objects are also used as results for comparison operators
+such as equality (==) and greater than (<span class="math notranslate nohighlight">\(&gt;\)</span>). In addition,
+relational operators and logical operators can be combined together to
+form complex logical questions. <a class="reference internal" href="#tab-relational"><span class="std std-ref">Table 1</span></a> shows the relational
+and logical operators with examples shown in the session that follows.</p>
+<span id="tab-relational"></span><table class="docutils align-center" id="id1">
+<caption><span class="caption-text"><strong>Table 1: C++ Relational and Logical Operators</strong></span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 13%" />
+<col style="width: 61%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Operation Name</strong></p></th>
+<th class="head"><p><strong>Operator</strong></p></th>
+<th class="head"><p><strong>Explanation</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>less than</p></td>
+<td><p><span class="math notranslate nohighlight">\(&lt;\)</span></p></td>
+<td><p>Less than operator</p></td>
+</tr>
+<tr class="row-odd"><td><p>greater than</p></td>
+<td><p><span class="math notranslate nohighlight">\(&gt;\)</span></p></td>
+<td><p>Greater than operator</p></td>
+</tr>
+<tr class="row-even"><td><p>less than or equal</p></td>
+<td><p><span class="math notranslate nohighlight">\(&lt;=\)</span></p></td>
+<td><p>Less than or equal to operator</p></td>
+</tr>
+<tr class="row-odd"><td><p>greater than or equal</p></td>
+<td><p><span class="math notranslate nohighlight">\(&gt;=\)</span></p></td>
+<td><p>Greater than or equal to operator</p></td>
+</tr>
+<tr class="row-even"><td><p>equal</p></td>
+<td><p><span class="math notranslate nohighlight">\(==\)</span></p></td>
+<td><p>Equality operator</p></td>
+</tr>
+<tr class="row-odd"><td><p>not equal</p></td>
+<td><p><span class="math notranslate nohighlight">\(!=\)</span></p></td>
+<td><p>Not equal operator</p></td>
+</tr>
+<tr class="row-even"><td><p>logical and</p></td>
+<td><p><span class="math notranslate nohighlight">\(&amp;&amp;\)</span></p></td>
+<td><p>Both operands true for result to be true</p></td>
+</tr>
+<tr class="row-odd"><td><p>logical or</p></td>
+<td><p><span class="math notranslate nohighlight">\(||\)</span></p></td>
+<td><p>One or the other operand is true for the result to be true</p></td>
+</tr>
+<tr class="row-even"><td><p>logical not</p></td>
+<td><p><span class="math notranslate nohighlight">\(!\)</span></p></td>
+<td><p>Negates the truth value, false becomes true, true becomes false</p></td>
+</tr>
+</tbody>
+</table>
+<div id='basiclogical' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="C++" >
+
+<div data-childcomponent="locicalcpp" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=locicalcpp data-lang="cpp" 
+      data-timelimit=25000    
+    data-audio=''     
+         data-caption='Basic Relational and Logical Operators C++' >
+#include <iostream>
+using namespace std;
+
+int main(){
+
+    cout << (5 == 10) << endl;
+    cout << (10 > 5) << endl;
+    cout << ((5 >= 1) && (5 <= 10)) << endl;
+
+    return 0;
+}
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Python" >
+
+<div data-childcomponent="logicalpy" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=logicalpy data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''     
+         data-caption='Basic Relational and Logical Operators Python' >
+def main():
+
+    print(5 == 10)
+    print(10 > 5)
+    print((5 >= 1) and (5 <= 10))
+
+main()
+</textarea>
+</div>
+</div>
+    </div>
+
+<p>When a C++ variable is declared space in memory is set aside to hold
+this type of value.
+A C++ variable can optionally be initialized in the declaration by
+using a combination of a declaration and an assignment statement.</p>
+<p>Consider the following session:</p>
+
+<div data-childcomponent="booleanpitfall" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=booleanpitfall data-lang="cpp" 
+      data-timelimit=25000    
+    data-audio=''     
+          >
+#include <iostream>
+using namespace std;
+
+int main(){
+
+    int theSum = 4;
+    cout << theSum << endl;
+
+    theSum = theSum + 1;
+    cout << theSum << endl;
+
+    bool theBool = true;
+    cout << theBool << endl;
+
+    theBool = 4;
+    cout << theBool << endl;
+
+    return 0;
+}
+</textarea>
+</div>
+<p>The declaration <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">theSum</span> <span class="pre">=</span> <span class="pre">0;</span></code> creates a variable called
+<code class="docutils literal notranslate"><span class="pre">theSum</span></code> and initializes it to hold the data value of <code class="docutils literal notranslate"><span class="pre">0</span></code>.
+As in Python, the right-hand side of each assignment
+statement is evaluated and the resulting data value is
+“assigned” to the variable named on the left-hand side.
+Here the type of the variable is integer.
+Because Python is dynamically typed, if the type of the data
+changes in the program, so does the type of the variable.
+However, in C++, the data type cannot change.
+This is a characteristic of C++’s static typing. A
+variable can hold ever only one type of data.
+Pitfall: C++ will often simply try to do the assignment you
+requested without
+complaining. Note what happened in the code above in the final output.</p>
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="mc_bool">
+            <p>Q-3: Why did theBool output a value of 1 after being set to 4?</p>
+
+            <li data-component="answer"  id="mc_bool_opt_a">Setting theBool to anything other than true or false is ignored.</li><li data-component="feedback" id="mc_bool_opt_a">No. Try changing the code and setting theBool to 0.</li>
+            
+            <li data-component="answer"  id="mc_bool_opt_b">Setting theBool to anything > 0 will be true and false otherwise.</li><li data-component="feedback" id="mc_bool_opt_b">No. Try changing the code and setting theBool to -4.</li>
+            
+            <li data-component="answer" data-correct id="mc_bool_opt_c">false == 0 and true = !false i.e. anything that is not zero and can be converted to a Boolean is not false, thus it must be true.</li><li data-component="feedback" id="mc_bool_opt_c">Correct!</li>
+            
+            <li data-component="answer"  id="mc_bool_opt_d">I have no idea. It makes no sense.</li><li data-component="feedback" id="mc_bool_opt_d">Try again. One of the above is correct. You might try changing the code and rerunning.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="character-data">
+<h1>Character Data<a class="headerlink" href="#character-data" title="Permalink to this headline">¶</a></h1>
+<p>In Python strings can be created with single or double quotes.
+In C++ single quotes are used for the character (<code class="docutils literal notranslate"><span class="pre">char</span></code>) data type,
+and double quotes are used for the string data type.</p>
+<p>Consider the following code.</p>
+<div id='usingchars' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Python" >
+
+<div data-childcomponent="charpy" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=charpy data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''     
+         data-caption='Python strings' >
+def main():
+
+    strvar = "b"
+    charvar = 'b'
+
+    print('b' == charvar)
+    print("b" == strvar)
+    print('a' == "a")
+
+main()
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="C++" >
+
+<div data-childcomponent="charcpp" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=charcpp data-lang="cpp" 
+      data-timelimit=25000    
+    data-audio=''     
+         data-caption='Considering characters and strings' >
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(){
+
+    string strvar = "b";
+    char charvar = 'b';
+
+    cout << ('b' == charvar) << endl;
+    cout << ("b" == strvar) << endl;
+    //cout << ('a' == "a") << endl; // will error!
+
+    return 0;
+}
+</textarea>
+</div>
+</div>
+    </div>
+
+<p>Try the following question.</p>
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="mc_cpp_strings">
+            <p>Q-4: If I want to create a string in C++, what set of symbols may be used?</p>
+
+            <li data-component="answer"  id="mc_cpp_strings_opt_a">' '</li><li data-component="feedback" id="mc_cpp_strings_opt_a">No, single quotes are only used for single characters.</li>
+            
+            <li data-component="answer" data-correct id="mc_cpp_strings_opt_b">" "</li><li data-component="feedback" id="mc_cpp_strings_opt_b">Good job reading!</li>
+            
+            <li data-component="answer"  id="mc_cpp_strings_opt_c">' ' or " " may be used</li><li data-component="feedback" id="mc_cpp_strings_opt_c">No. Try again.</li>
+            
+            <li data-component="answer"  id="mc_cpp_strings_opt_d">It depends upon the implementation.</li><li data-component="feedback" id="mc_cpp_strings_opt_d">No. Try again.</li>
+            
+            <li data-component="answer"  id="mc_cpp_strings_opt_e">none of the above</li><li data-component="feedback" id="mc_cpp_strings_opt_e">One of the above is indeed correct.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="pointers">
+<h1>Pointers<a class="headerlink" href="#pointers" title="Permalink to this headline">¶</a></h1>
+<p>A C++ <strong>pointer</strong> is a variable that stores a memory address and can be used to indirectly
+access data stored at that memory location.</p>
+<p>We know that variables in a computer program are used to label data with a
+descriptive identifier so that the data can be accessed and used by that
+computer program.</p>
+<p>Let’s look at some examples of storing an integer in Python and C++.</p>
+<p>In Python every single thing is stored as an object.
+Hence, a Python variable is actually a reference to an object that is stored in memory.
+Hence, each Python variable requires two memory locations:
+one to store the reference, and the other to store the variable value itself in an object.</p>
+<p>In C++ the value of each variable is stored directly in memory without the need
+for either a reference or an object. This makes access faster, but it is one of
+the reasons we need to declare each variable because different types take differing
+amounts of space in memory!</p>
+<p>The following code declares a variable called <em>varN</em> that has in it a
+value of 100:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Python</span> <span class="n">reference</span> <span class="k">for</span> <span class="n">a</span> <span class="n">single</span> <span class="n">integer</span> <span class="n">value</span>
+<span class="n">varN</span> <span class="o">=</span> <span class="mi">100</span>
+</pre></div>
+</div>
+<div class="figure align-center" id="id2">
+<span id="fig-py-reference"></span><img alt="&quot;arrow from varN to box containing 100 object&quot;" src="../_images/python_reference.png" />
+<p class="caption"><span class="caption-text">Figure 4: Python reference</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">C</span><span class="o">++</span> <span class="n">variable</span> <span class="n">declaration</span> <span class="ow">and</span> <span class="n">assignment</span> <span class="n">of</span> <span class="n">an</span> <span class="n">integer</span> <span class="n">value</span>
+<span class="nb">int</span> <span class="n">varN</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>In C++ the results of running this code will look like the diagram below:</p>
+<div class="figure align-center" id="id3">
+<span id="fig-cpp-reference"></span><img alt="&quot;Location named varN containing value of 100&quot;" src="../_images/cpp_var.png" />
+<p class="caption"><span class="caption-text">Figure 4: C++ variable</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>In each case, when we want to output the value to the console, we use the variable name
+to do so.</p>
+<p>But, we can also identify the memory location of the variable by its address.
+In both Python and C++, this address
+may change each time the program is run. In C++, the address will always look
+odd because it will be the actual memory address written in a hexadecimal code
+which is a base 16 code like 0x7ffd93f25244.
+In Python it is implementation dependent,
+it is sometimes a hexadecimal code and sometimes just a count or another
+way to reference the address.</p>
+<p>In Python we use <code class="docutils literal notranslate"><span class="pre">id</span></code> to reference the address,
+while in C++ we use the <em>address-of operator</em>, <code class="docutils literal notranslate"><span class="pre">&amp;</span></code>.</p>
+<div id='memory-addresses' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="C++" >
+
+<div data-childcomponent="address_cpp" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=address_cpp data-lang="cpp" 
+      data-timelimit=25000    
+    data-audio=''     
+         data-caption='Memory addresses in C++' >
+#include <iostream>
+using namespace std;
+
+int main(){
+    int varN = 101;
+    cout << varN << endl;
+    cout << &varN << endl;
+    return 0;
+}
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Python" >
+
+<div data-childcomponent="address_py" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=address_py data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''     
+         data-caption='Memory identifier in Python' >
+def main():
+    varN = 101;
+    print(varN)
+    print(id(varN))
+
+main()
+</textarea>
+</div>
+</div>
+    </div>
+
+<p>In both Python and C++, variables are stored in memory locations which are dependent
+upon the run itself. If you repeatedly run the above code in either C++ or Python, you may
+see the location change.</p>
+<p>As suggested above, in Python, it is impossible to store a variable directly.
+Instead, we must use a variable name and a reference to the data object.
+(Hence the arrow in the image.)
+In C++, variables store values directly, because they are faster to reference.</p>
+<p>References are slower, but they are sometimes useful.
+If in C++, we want to create a analogous reference to a memory location,
+we must use a special data type called a <strong>pointer</strong>.</p>
+<div class="section" id="pointer-syntax">
+<h2>Pointer Syntax<a class="headerlink" href="#pointer-syntax" title="Permalink to this headline">¶</a></h2>
+<p>When declaring a pointer in C++ that will “point” to the memory address of some
+data type,
+you will use the same rules of declaring variables and data types.
+The key difference is that there must be an asterisk (*) between the data type and the
+identifier.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">variableType</span> <span class="o">*</span><span class="n">identifier</span><span class="p">;</span> <span class="o">//</span> <span class="n">syntax</span> <span class="n">to</span> <span class="n">declare</span> <span class="n">a</span> <span class="n">C</span><span class="o">++</span> <span class="n">pointer</span>
+<span class="nb">int</span> <span class="o">*</span><span class="n">ptrx</span><span class="p">;</span> <span class="o">//</span> <span class="n">example</span> <span class="n">of</span> <span class="n">a</span> <span class="n">C</span><span class="o">++</span> <span class="n">pointer</span> <span class="n">to</span> <span class="n">an</span> <span class="n">integer</span>
+</pre></div>
+</div>
+<p>White space in C++ generally does not matter, so the following pointer declarations
+are identical:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SOMETYPE</span> <span class="o">*</span><span class="n">variablename</span><span class="p">;</span> <span class="o">//</span> <span class="n">preferable</span>
+<span class="n">SOMETYPE</span> <span class="o">*</span> <span class="n">variablename</span><span class="p">;</span>
+<span class="n">SOMETYPE</span><span class="o">*</span> <span class="n">variablename</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>However, the first declaration is preferable because it is clearer to the
+programmer that the variable is in fact a pointer because the asterisk is closer
+to the variable name.</p>
+<div class="section" id="the-address-of-operator">
+<h3>The address-of operator, <code class="docutils literal notranslate"><span class="pre">&amp;</span></code><a class="headerlink" href="#the-address-of-operator" title="Permalink to this headline">¶</a></h3>
+<p>Now that we know how to declare pointers, how do we give them the address of
+where the value is going to be stored? One way to do this is to have a pointer
+refer to another variable by using the address-of operator, which is denoted by the
+ampersand symbol, <code class="docutils literal notranslate"><span class="pre">&amp;</span></code>. The address-of operator <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> does exactly what it indicates,
+namely it returns the address.</p>
+<p>The syntax is shown below, where varN stores the value, and ptrN stores
+the address of where varN is located:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">variableType</span> <span class="n">varN</span><span class="p">;</span>  <span class="o">//</span> <span class="n">a</span> <span class="n">variable</span> <span class="n">to</span> <span class="n">hold</span> <span class="n">the</span> <span class="n">value</span>
+<span class="n">variableType</span> <span class="o">*</span><span class="n">ptrN</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">varN</span><span class="p">;</span>  <span class="o">//</span> <span class="n">a</span> <span class="n">variable</span> <span class="n">pointing</span> <span class="n">to</span> <span class="n">the</span> <span class="n">address</span> <span class="n">of</span> <span class="n">varN</span>
+</pre></div>
+</div>
+<p>Keep in mind that when declaring a C++ pointer, the pointer needs to
+reference the same type as the variable or constant to which it points.</p>
+<p>Expanding on the example above where varN has the value of 100.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span><span class="n">variable</span> <span class="n">declaration</span> <span class="k">for</span> <span class="n">a</span> <span class="n">single</span> <span class="n">integer</span> <span class="n">value</span>
+<span class="nb">int</span> <span class="n">varN</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+<span class="nb">int</span> <span class="o">*</span><span class="n">ptrN</span><span class="p">;</span>
+<span class="n">ptrN</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">varN</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>The results of running this C++ code will look like the diagram below.</p>
+<div class="figure align-center" id="id4">
+<span id="fig-point2"></span><img alt="image" src="../_images/point2.png" />
+<p class="caption"><span class="caption-text">Figure 5: FIXME2</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="accessing-values-from-pointers">
+<h2>Accessing Values from Pointers<a class="headerlink" href="#accessing-values-from-pointers" title="Permalink to this headline">¶</a></h2>
+<p>Once you have a C++ pointer, you use the asterisk before the pointer variable,
+to <em>dereference</em> the pointer, which means go to the location pointed at by the address.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>In other words, varN and *ptrN (note the asterisk in front!) reference the same
+value in the code above.
+</pre></div>
+</div>
+<p>Let’s extend the example above to output the value of a variable and its address
+in memory:</p>
+<blockquote id="dereferencing">
+<div>
+<div data-childcomponent="firstptr" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=firstptr data-lang="cpp" 
+      data-timelimit=25000    
+    data-audio=''     
+          >
+#include <iostream>
+using namespace std;
+
+int main( ) {
+    int varN = 100;
+    int *ptrN = &varN; // ptrN points to varN address
+
+    cout << "varN value: " << varN << endl;
+    cout << "ptrN location: " << ptrN << endl;
+    cout << "dereference ptrN: " << *ptrN << "endl";
+
+
+    return 0;
+}
+</textarea>
+</div>
+</div></blockquote>
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="mc_pntrhlp">
+            <p>Q-5: If the lines (varN = 50;) and  (cout &lt;&lt; *ptrN &lt;&lt; endl;) were inserted into line 7-8, what would it cout?</p>
+
+            <li data-component="answer"  id="mc_pntrhlp_opt_a">varPntr: 100</li><li data-component="feedback" id="mc_pntrhlp_opt_a">Not quite, the variable varN no longer equals 100 past line 7!</li>
+            
+            <li data-component="answer" data-correct id="mc_pntrhlp_opt_b">varPntr: 50</li><li data-component="feedback" id="mc_pntrhlp_opt_b">Right!</li>
+            
+            <li data-component="answer"  id="mc_pntrhlp_opt_c">varPntr: 150</li><li data-component="feedback" id="mc_pntrhlp_opt_c">No, the values do not add together!</li>
+            
+            <li data-component="answer"  id="mc_pntrhlp_opt_d">0x7ffeb9ce053c</li><li data-component="feedback" id="mc_pntrhlp_opt_d">We are dereferencing the pointer, so you would not get the address of varN. Try again!</li>
+            
+            <li data-component="answer"  id="mc_pntrhlp_opt_e">none of the above</li><li data-component="feedback" id="mc_pntrhlp_opt_e">One of the above is indeed correct.</li>
+            
+
+            </ul>
+            </div>
+            <p>Compiling and running the above code will have the program output the
+value in varN,
+what is in ptrN (the memory address of varN),
+and what value is located at that
+memory location.</p>
+<p>The second output sentence is the address of varN, which would most likely be
+different if you run the program on your machine.</p>
+<p>WARNING: What happens if you forget the asterisk
+when assigning a value to a pointer
+and had the following instructions instead?</p>
+<blockquote id="cpp-address-error">
+<div>
+<div data-childcomponent="cpp_address_error1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=cpp_address_error1 data-lang="cpp" 
+      data-timelimit=25000    
+    data-audio=''     
+          >
+#include <iostream>
+using namespace std;
+
+int main( ) {
+    int varN = 100;
+    int ptrN = varN; // Note no asterisk,
+        // ptrN now refers to memory position 100,
+        // whatever happens to be there!
+        // You might get an error or you might not!
+
+     cout << "varN value: " << varN << endl;
+     cout << "ptrN location: " << ptrN << endl;
+     cout << "ptrN points to varN: " << endl;
+     cout << "dereference ptrN: " << *ptrN << "endl";
+
+     return 0;
+}
+</textarea>
+</div>
+</div></blockquote>
+<p><strong>This is BAD, BAD, BAD!</strong></p>
+<div class="figure align-center" id="id5">
+<span id="fig-point3"></span><img alt="image" src="../_images/point_broken.png" />
+<p class="caption"><span class="caption-text">Figure 6: FIXME3</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>If your compiler does not catch that error (the one for this class may),
+the first <code class="docutils literal notranslate"><span class="pre">cout</span></code> instruction outputs</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">After</span> <span class="n">changing</span> <span class="o">*</span><span class="n">ptrN</span><span class="p">,</span> <span class="n">varN</span> <span class="n">now</span> <span class="n">has</span><span class="p">:</span> <span class="mi">50</span>
+</pre></div>
+</div>
+<p>which is expected because you changed where ptrN is pointing to and
+NOT the contents of where it is pointing.</p>
+<p>The second <code class="docutils literal notranslate"><span class="pre">cout</span></code> instruction is a disaster because
+(1) You don’t know what is stored in location 100 in memory, and
+(2) that location is outside of your segment (area in memory reserved
+for your program), so the operating system will jump in with a message
+about a “segmentation fault”. Although such an error message looks bad,
+a “seg fault” is in fact a helpful error because unlike the elusive logical
+errors, the reason is fairly localized.</p>
+</div>
+<div class="section" id="the-null-pointer">
+<h2>The NULL pointer<a class="headerlink" href="#the-null-pointer" title="Permalink to this headline">¶</a></h2>
+<p>Like <code class="docutils literal notranslate"><span class="pre">None</span></code> in Python, the <code class="docutils literal notranslate"><span class="pre">NULL</span></code> pointer in C++ points to
+nothing and is often denoted by the keyword <code class="docutils literal notranslate"><span class="pre">NULL</span></code> (all caps) or by 0.
+The NULL pointer is often used in conditions and/or in logical operations.</p>
+<p>The following example demonstrates how the NULL pointer works.
+The variable ptrx initially has the address of x when it is declared.
+On the first iteration of the loop, it is assigned the value of <code class="docutils literal notranslate"><span class="pre">NULL</span></code> (i.e. 0)
+thereby ending the loop:</p>
+<blockquote id="lst-cppcode2">
+<div>
+<div data-childcomponent="NULLexamplecpp" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=NULLexamplecpp data-lang="cpp" 
+      data-timelimit=25000    
+    data-audio=''     
+          >
+#include <iostream>
+using namespace std;
+
+int main( ) {
+    int x = 12345;
+    int *ptrx = &x;
+
+    while (ptrx) {
+        cout << "Pointer ptrx points to " << &ptrx << endl;
+        ptrx = NULL;
+    }
+
+    cout << "Pointer ptrx points to nothing!\n";
+}
+</textarea>
+</div>
+</div></blockquote>
+<p>Helpful Tip: The NULL pointer becomes very useful when you must test
+the state of a pointer, such as whether the assignment to an address
+is valid or not.</p>
+</div>
+</div>
+<div class="section" id="summary">
+<h1>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic simple">
+<li><p>All variables must be declared before use in C++.</p></li>
+<li><p>C++ has typical built-in numeric types: <code class="docutils literal notranslate"><span class="pre">int</span></code> is for integers and <code class="docutils literal notranslate"><span class="pre">float</span></code> and <code class="docutils literal notranslate"><span class="pre">double</span></code> are used for floating point depending on the number of digits desired.</p></li>
+<li><p>C++ has the Boolean type <code class="docutils literal notranslate"><span class="pre">bool</span></code> that holds <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p>The character data type <code class="docutils literal notranslate"><span class="pre">char</span></code> holds a single character which is encased in single quotes.</p></li>
+<li><p>Pointers are a type of variable that stores a memory address. To declare a pointer, an  <code class="docutils literal notranslate"><span class="pre">*</span></code> is used before the variable name that is supposed to store the location.</p></li>
+</ol>
+</div>
+<div class="section" id="check-yourself">
+<h1>Check Yourself<a class="headerlink" href="#check-yourself" title="Permalink to this headline">¶</a></h1>
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="mc_characters">
+            <p>Q-6: If I want to use the <code class="docutils literal notranslate"><span class="pre">char</span></code> type in C++, what set of symbols must be used?</p>
+
+            <li data-component="answer" data-correct id="mc_characters_opt_a">' '</li><li data-component="feedback" id="mc_characters_opt_a">Right!</li>
+            
+            <li data-component="answer"  id="mc_characters_opt_b">" "</li><li data-component="feedback" id="mc_characters_opt_b">No. Double quotes are only used for strings.</li>
+            
+            <li data-component="answer"  id="mc_characters_opt_c">' ' or " " may be used</li><li data-component="feedback" id="mc_characters_opt_c">No. Try again.</li>
+            
+            <li data-component="answer"  id="mc_characters_opt_d">It depends upon the implementation.</li><li data-component="feedback" id="mc_characters_opt_d">No. Try again.</li>
+            
+            <li data-component="answer"  id="mc_characters_opt_e">none of the above</li><li data-component="feedback" id="mc_characters_opt_e">One of the above is indeed correct.</li>
+            
+
+            </ul>
+            </div>
+            
+        <div class="runestone">
+        <div data-component="fillintheblank" id="memoryvar">
+            <p>Q-7:  A/an <code class="docutils literal notranslate"><span class="pre">___</span></code> is used to store a memory address in C++?</p>
+<input type="text">
+        <script type="application/json">
+            [[{"regex": "^ *pointer *$", "regexFlags": "", "feedback": "<p>Right!</p>\n"}, {"regex": "^ *variable *$", "regexFlags": "", "feedback": "<p>Be more specific!</p>\n"}, {"regex": "^ *reference *$", "regexFlags": "", "feedback": "<p>That\u2019s Python, not C++!</p>\n"}, {"regex": "^ *default *$", "regexFlags": "", "feedback": "<p>Incorrect. Please try again</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="mc_memory">
+            <p>Q-8: How may one reference a variable’s memory address in C++?</p>
+
+            <li data-component="answer" data-correct id="mc_memory_opt_a">using ``&``</li><li data-component="feedback" id="mc_memory_opt_a">Right! ``&`` is the "address-of" operator, used to reference an address.</li>
+            
+            <li data-component="answer"  id="mc_memory_opt_b">using ``*``</li><li data-component="feedback" id="mc_memory_opt_b">No. ``int *p;`` defines a pointer to an integer, and ``*p`` would dereference that pointer, i.e. retrieve the data that p points to.</li>
+            
+            <li data-component="answer"  id="mc_memory_opt_c">using ``id``</li><li data-component="feedback" id="mc_memory_opt_c">No. This is used in Python.</li>
+            
+            <li data-component="answer"  id="mc_memory_opt_d">It depends upon the implementation.</li><li data-component="feedback" id="mc_memory_opt_d">No. Try again.</li>
+            
+            <li data-component="answer"  id="mc_memory_opt_e">none of the above</li><li data-component="feedback" id="mc_memory_opt_e">One of the above is indeed correct.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+
+
+  
+      
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017 ibrahim.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 3.4.5.
+    </p>
+  </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

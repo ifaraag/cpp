@@ -1,0 +1,17 @@
+Welcome to *Computer Programming Using C++*
+============================================
+
+This short ebook is a an adaptation from `*C++ for Python Programmers* <https://github.com/pearcej/cpp4python>`_ By Dr.Jan Pearce with very littel changes from the source material that is intended to help learn the basics of the C++ programming language. 
+
+
+This book does not attempt to replace the many good C++ reference books that are available. Please feel free to use this book for yourself, or as a resource for a class you are teaching.
+
+Some sections of this book were originally written by Dr. Brad Miller as 
+*Java for Python Programmers*. These were translated to the C++ language 
+by Dr. Jan Pearce and a team of excellent students from Berea College.
+Other sections were originally written as class web pages by Dr. Jan Pearce.
+
+This ebook is published using a Creative Commons license to
+encourage you to use it, change it, and modify it for your own purposes.
+We would appreciate knowing what you think if you do use this book, and we
+would love to see any modifications or additions you make.  Please, Fork Me!
